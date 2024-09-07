@@ -1,0 +1,650 @@
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salaryhikes_data.py", line 8, in <module>
+    data = pd.read_csv('salary_data.csv')  # Replace with your dataset
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__    
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'salary_data.csv'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salaryhikes_data.py", line 8, in <module>
+    data = pd.read_csv('salary_data.csv')  # Replace with your dataset
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv    
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__    
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'salary_data.csv'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+    X = data[['Degree', 'Years of Experience', 'Job Role', 'Industry', 'Location', 'Skills']]
+        ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Skills'] not in index"
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+Traceback (most recent call last):
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salaryhikes_data.py", line 12, in <module>
+    y = data['Salary']
+        ~~~~^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc      
+    raise KeyError(key) from err
+KeyError: 'Salary'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salaryhikes_data.py", line 22, in <module>
+    model.fit(X_train, y_train)
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\ensemble\_forest.py", line 363, in fit
+    X, y = self._validate_data(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py", line 650, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1301, in check_X_y    
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 929, in check_array   
+    array = array.astype(new_dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 6643, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\internals\managers.py", line 430, in astype  
+    return self.apply(
+           ^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\internals\managers.py", line 363, in apply   
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\internals\blocks.py", line 758, in astype    
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\dtypes\astype.py", line 237, in astype_array_safe
+    new_values = astype_array(values, dtype, copy=copy)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    values = _astype_nansafe(values, dtype, copy=copy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\dtypes\astype.py", line 133, in _astype_nansafe
+    return arr.astype(dtype, copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Research Scientist'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salaryhikes_data.py
+  File "c:\Users\Zoya\temp\mlworld\salaryhikes_data.py", line 8
+    data = pd.read_csv(C:\Users\Zoya\temp\mlworld\salary_data.csv)  # Replace with your dataset
+                        ^
+SyntaxError: invalid syntax
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/sH.py       
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/sH.py       
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salary_hikes_model.py", line 48, in <module>
+    joblib.dump(model, 'model/rental_price_model.joblib')
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'model/rental_price_model.joblib'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salary_hikes_model.py", line 48, in <module>
+    joblib.dump(model, 'model/salary.joblib')
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'model/salary.joblib'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\salary_hikes_model.py", line 48, in <module>
+    joblib.dump(model, 'model/salary.joblib')
+  File "C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'model/salary.joblib'
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+Model saved to 'salary_hike_model.joblib'
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/salary_hikes_model.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names                                                                           e n
+  warnings.warn(
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+  warnings.warn(
+                                                                                                                                      e n
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/predict.py
+Enter your degree (Bachelor's, Master's, PhD):
+  File "c:\Users\Zoya\temp\mlworld\predict.py", line 17, in <module>
+    experience_input = float(input("Enter your years of experience: "))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/predict.py
+Enter your years of experience: 3
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+Predicted Salary Hike for phD with 3.0 years of experience: 9.71%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/predict.pEnter your degree (Bachelor's, Master's, PhD): Bachelor's
+Enter your years of experience: 3
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+Predicted Salary Hike for Bachelor's with 3.0 years of experience: 3.43%
+PS C:\Users\Zoya\temp\mlworld> py .\predict.py
+Enter your degree (Bachelor's, Master's, PhD): PhD
+Enter your years of experience: 9
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+Predicted Salary Hike for PhD with 9.0 years of experience: 16.57%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/app.py   
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+Traceback (most recent call last):
+  File "c:\Users\Zoya\temp\mlworld\app.py", line 50, in <module>
+    predicted_hike = loaded_model.predict(new_data)
+                     ^^^^^^^^^^^^
+NameError: name 'loaded_model' is not defined
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/app.py   
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> & C:/Users/Zoya/AppData/Local/Programs/Python/Python312/python.exe c:/Users/Zoya/temp/mlworld/app.py   
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5
+1   2    Master's                   3                 95000               10
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+Model saved to 'salary_hike_model.joblib'
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+e names, but LinearRegression was fitted with feature names
+  warnings.warn(
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+C:\Users\Zoya\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+PS C:\Users\Zoya\temp\mlworld> py .\app.py
+Sample Data:
+    ID      Degree  Experience (Years)  Current Salary (USD)  Salary Hike (%)
+0   1  Bachelor's                   1                 75000                5 
+1   2    Master's                   3                 95000               10 
+2   3         PhD                   5                125000               12
+3   4  Bachelor's                   7                110000                8
+4   5    Master's                  10                140000               15
+5   6         PhD                  12                170000               20
+
+Data after One-Hot Encoding:
+    ID  Experience (Years)  Current Salary (USD)  Salary Hike (%)  Master's  PhD
+0   1                   1                 75000                5       0.0  0.0
+1   2                   3                 95000               10       1.0  0.0
+2   3                   5                125000               12       0.0  1.0
+3   4                   7                110000                8       0.0  0.0
+4   5                  10                140000               15       1.0  0.0
+5   6                  12                170000               20       0.0  1.0
+e names, but LinearRegression was fitted with feature names
+Predicted Salary Hike for a Master's degree with 6 years experience: 10.43%
+
+Mean Absolute Error (MAE): 3.428571428571431
+R-squared (R2 Score): -0.9102040816326558
+e names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+PS C:\Users\Zoya\temp\mlworld>
+PS C:\Users\Zoya\temp\mlworld> docker --version
+Docker version 27.0.3, build 7d4bcd8
+PS C:\Users\Zoya\temp\mlworld> docker images
+REPOSITORY      TAG       IMAGE ID       CREATED       SIZE
+kaja184/mlapp   latest    ff666b612dd0   13 days ago   1.38GB
+mlapp           latest    ff666b612dd0   13 days ago   1.38GB
+kindest/node    <none>    b5cb8c3b1441   3 weeks ago   1.03GB
+PS C:\Users\Zoya\temp\mlworld> docker ps
+CONTAINER ID   IMAGE                  COMMAND                  CREATED      STATUS       PORTS                       NAMES
+186e05c57bbd   kindest/node:v1.31.0   "/usr/local/bin/entr…"   9 days ago   Up 2 hours   127.0.0.1:61223->6443/tcp   main-kind-k8s-cluster-control-plane
+PS C:\Users\Zoya\temp\mlworld> dir
+
+
+    Directory: C:\Users\Zoya\temp\mlworld
+
+----                 -------------         ------ ----
+d-----        07-09-2024     10:06                data
+d-----        07-09-2024     10:09                model
+-a----        07-09-2024     11:27           2812 app.py
+-a----        07-09-2024     12:06            532 Dockerfile.txt
+-a----        07-09-2024     10:28           1052 predict.py
+-a----        07-09-2024     12:02            929 salary_hike_model.joblib
+
+
+PS C:\Users\Zoya\temp\mlworld>
+PS C:\Users\Zoya\temp\mlworld> docker build . -t mlapp
+[+] Building 4.4s (1/1) FINISHED                                                                                 docker:desktop-linux 
+ => [internal] load build definition from Dockerfile                                                                             1.6s 
+ => => transferring dockerfile: 2B                                                                                               0.4s 
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/kmivc7t577rozso6383wvj1vs
+
+
+    Directory: C:\Users\Zoya\temp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        07-09-2024     11:35                mlworld
+
+
+PS C:\Users\Zoya\temp> cd mlworld
+PS C:\Users\Zoya\temp\mlworld> ls -lrt
+Get-ChildItem : A parameter cannot be found that matches parameter name 'lrt'.
+At line:1 char:4
++ ls -lrt
++    ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-ChildItem], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+PS C:\Users\Zoya\temp\mlworld> ls
+
+
+    Directory: C:\Users\Zoya\temp\mlworld
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        07-09-2024     10:06                data
+d-----        07-09-2024     10:09                model
+-a----        07-09-2024     11:27           2812 app.py
+-a----        07-09-2024     12:06            532 Dockerfile.txt
+-a----        07-09-2024     10:04           2812 salary_hikes_model.py
+-a----        07-09-2024     12:02            929 salary_hike_model.joblib
+
+
+PS C:\Users\Zoya\temp\mlworld> docker build -t salary-hike-predictor .
+[+] Building 2.6s (1/1) FINISHED                                                                                 docker:desktop-linux 
+ => [internal] load build definition from Dockerfile                                                                             0.7s 
+ => => transferring dockerfile: 2B                                                                                               0.0s 
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rzl3ixwgzl3rkilzq01rjpfc9
+PS C:\Users\Zoya\temp\mlworld>
+PS C:\Users\Zoya\temp\mlworld> docker build -t salary-hike-predictor .
+[+] Building 833.6s (9/10)                                                                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                             1.2s
+ => => transferring dockerfile: 571B                                                                                             0.8s 
+ => [internal] load metadata for docker.io/library/python:latest                                                                12.2s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                0.4s
+ => => transferring context: 2B                                                                                                  0.0s 
+ => [1/5] FROM docker.io/library/python:latest@sha256:11aa4b620c15f855f66f02a7f3c1cd9cf843cc10f3edbcf158e5ebcd98d1f549         752.8s
+ => => resolve docker.io/library/python:latest@sha256:11aa4b620c15f855f66f02a7f3c1cd9cf843cc10f3edbcf158e5ebcd98d1f549           1.0s 
+ => => sha256:11aa4b620c15f855f66f02a7f3c1cd9cf843cc10f3edbcf158e5ebcd98d1f549 9.72kB / 9.72kB                                   0.0s
+ => => sha256:5f05ce3030ac305b6ef2dcffbef95ccb6ba00169e8fe7163a739ac8bdddd191b 2.52kB / 2.52kB                                   0.0s
+ => => sha256:3aa52f796435c7f490eeeb2233d7b44b15aee72e110513c3a60c3def45382407 7.08kB / 7.08kB                                   0.0s
+ => => sha256:8cd46d290033f265db57fd808ac81c444ec5a5b3f189c3d6d85043b647336913 49.56MB / 49.56MB                                85.3s
+ => => sha256:2e66a70da0bec13fb3d492fcdef60fd8a5ef0a1a65c4e8a4909e26742852f0f2 64.15MB / 64.15MB                               110.1s
+ => => sha256:2e6afa3f266c11e8960349e7866203a9df478a50362bb5488c45fe39d99b2707 24.05MB / 24.05MB                                37.8s 
+ => => sha256:1c8ff076d818ad6b8557e03e10c83657cc716ab287c8380054ff91571c8cae81 211.27MB / 211.27MB                             231.5s 
+ => => sha256:d0871d6741a8dcd729852894a8947af3790439a69b905ce34a491a647ffab141 6.16MB / 6.16MB                                 109.0s 
+ => => extracting sha256:8cd46d290033f265db57fd808ac81c444ec5a5b3f189c3d6d85043b647336913                                      134.1s 
+ => => sha256:032d5bff19073949e3df9a288ad2b6579a9a3518593ff798687fbb92dcb58574 22.44MB / 22.44MB                               132.3s 
+ => => sha256:dd43c92222e84b32ae0861eceea3f06f16e23de239e493a668a730c3cf9fde34 232B / 232B                                     112.1s 
+ => => sha256:0c867f41564f479e0f00a7ba3bb696b2301a7cb7b424cfbb5178d81eaf7b7d01 1.67MB / 1.67MB                                 118.1s 
+ => => extracting sha256:2e6afa3f266c11e8960349e7866203a9df478a50362bb5488c45fe39d99b2707                                       37.8s 
+ => => extracting sha256:2e66a70da0bec13fb3d492fcdef60fd8a5ef0a1a65c4e8a4909e26742852f0f2                                       79.9s 
+ => => extracting sha256:1c8ff076d818ad6b8557e03e10c83657cc716ab287c8380054ff91571c8cae81                                      317.3s 
+ => => extracting sha256:d0871d6741a8dcd729852894a8947af3790439a69b905ce34a491a647ffab141                                        7.6s 
+ => => extracting sha256:032d5bff19073949e3df9a288ad2b6579a9a3518593ff798687fbb92dcb58574                                       24.3s 
+ => => extracting sha256:dd43c92222e84b32ae0861eceea3f06f16e23de239e493a668a730c3cf9fde34                                        0.0s 
+ => => extracting sha256:0c867f41564f479e0f00a7ba3bb696b2301a7cb7b424cfbb5178d81eaf7b7d01                                        3.4s 
+ => [internal] load build context                                                                                                1.4s 
+ => => transferring context: 10.33kB                                                                                             0.6s
+ => [2/5] WORKDIR /mlworld                                                                                                       3.7s 
+ => [3/5] COPY requirements.txt /app/requirements.txt                                                                            3.0s 
+ => ERROR [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                              51.4s 
+------
+ > [4/5] RUN pip install --no-cache-dir -r requirements.txt:
+48.42 ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+--------------------
+   7 |     # 3. Copy the requirements file and install dependencies
+   8 |     COPY requirements.txt /app/requirements.txt
+   9 | >>> RUN pip install --no-cache-dir -r requirements.txt
+  11 |     # Expose Port 5000
+--------------------
+ERROR: failed to solve: process "/bin/sh -c pip install --no-cache-dir -r requirements.txt" did not complete successfully: exit code: 
+1
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ofqo9lhc4xzvojjdhfj5oite0
+PS C:\Users\Zoya\temp\mlworld>
+PS C:\Users\Zoya\temp\mlworld> docker images
+REPOSITORY      TAG       IMAGE ID       CREATED       SIZE
+kaja184/mlapp   latest    ff666b612dd0   13 days ago   1.38GB
+mlapp           latest    ff666b612dd0   13 days ago   1.38GB
+kindest/node    <none>    b5cb8c3b1441   3 weeks ago   1.03GB
+PS C:\Users\Zoya\temp\mlworld> docker build -t salary-hike-predictor .
+[+] Building 26.6s (9/10)                                                                                        docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                             1.3s
+ => => transferring dockerfile: 536B                                                                                             0.6s
+ => [internal] load metadata for docker.io/library/python:latest                                                                15.9s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                0.3s
+ => => transferring context: 2B                                                                                                  0.0s
+ => [1/5] FROM docker.io/library/python:latest@sha256:11aa4b620c15f855f66f02a7f3c1cd9cf843cc10f3edbcf158e5ebcd98d1f549           0.0s
+ => [internal] load build context                                                                                                0.3s 
+ => => transferring context: 889B                                                                                                0.0s
+ => CACHED [2/5] WORKDIR /mlworld                                                                                                0.0s
+ => CACHED [3/5] COPY requirements.txt /app/requirements.txt                                                                     0.0s 
+ => ERROR [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                               6.8s
+------
+ > [4/5] RUN pip install --no-cache-dir -r requirements.txt:
+5.634 ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+Dockerfile:9
+--------------------
+   7 |     # 3. Copy the requirements file and install dependencies
+   8 |     COPY requirements.txt /app/requirements.txt
+   9 | >>> RUN pip install --no-cache-dir -r requirements.txt
+  10 |
+  11 |     # 4. Copy the rest of the application code (Python script, model, etc.) to the working directory
+--------------------
+ERROR: failed to solve: process "/bin/sh -c pip install --no-cache-dir -r requirements.txt" did not complete successfully: exit code: 
+1
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/x4480zy7ran1fl1ztcet7k0af
+PS C:\Users\Zoya\temp\mlworld> docker build -t salary-hike-predictor .
+[+] Building 198.3s (10/10) FINISHED                                                                             docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                             0.8s
+ => => transferring dockerfile: 530B                                                                                             0.1s
+ => [internal] load metadata for docker.io/library/python:3.9-slim                                                               4.4s
+ => [internal] load .dockerignore                                                                                                0.3s
+ => => transferring context: 2B                                                                                                  0.0s
+ => [internal] load build context                                                                                                0.6s
+ => => transferring context: 883B                                                                                                0.0s
+ => [1/5] FROM docker.io/library/python:3.9-slim@sha256:69e712dbe4c4a166527cbf69374533125cfb6ee93a5e39031a0191c741d386d7        45.5s
+ => => resolve docker.io/library/python:3.9-slim@sha256:69e712dbe4c4a166527cbf69374533125cfb6ee93a5e39031a0191c741d386d7         0.8s
+ => => sha256:69e712dbe4c4a166527cbf69374533125cfb6ee93a5e39031a0191c741d386d7 10.41kB / 10.41kB                                 0.0s
+ => => sha256:70fbdeb75b0d071778ea1df4353ac959118ae8031bc5be33a95d1b8ea1fb8f08 1.94kB / 1.94kB                                   0.0s
+ => => sha256:f0f90af30b75be2af4deba7212b09569194c2cbddc6a87f6cd9019cd3fc94645 6.89kB / 6.89kB                                   0.0s
+ => => sha256:a2318d6c47ec9cac5acc500c47c79602bcf953cec711a18bc898911a0984365b 29.13MB / 29.13MB                                14.3s
+ => => sha256:48bab944250afc1724bc7daad36473cdc421deb587d3dfbc4492e91ca3198cca 11.89MB / 11.89MB                                 8.0s 
+ => => sha256:7dad3bc12ce06a1ad289be1b8c81a13f01e989c7aea8ae2fd09c873e20fabaa8 3.51MB / 3.51MB                                   4.1s 
+ => => sha256:1c3590863df047ac4fa0b51af7b555c8bb09096e136842054ac2a267da4a12a9 237B / 237B                                       6.1s 
+ => => sha256:185d6caf6b418db19bdcf196a7ed21be9b0dc9a8eaadafe646aad2a3ec161aa5 2.77MB / 2.77MB                                   9.2s 
+ => => extracting sha256:a2318d6c47ec9cac5acc500c47c79602bcf953cec711a18bc898911a0984365b                                       10.2s 
+ => => extracting sha256:7dad3bc12ce06a1ad289be1b8c81a13f01e989c7aea8ae2fd09c873e20fabaa8                                        2.0s 
+ => => extracting sha256:48bab944250afc1724bc7daad36473cdc421deb587d3dfbc4492e91ca3198cca                                        6.3s 
+ => => extracting sha256:1c3590863df047ac4fa0b51af7b555c8bb09096e136842054ac2a267da4a12a9                                        0.0s 
+ => => extracting sha256:185d6caf6b418db19bdcf196a7ed21be9b0dc9a8eaadafe646aad2a3ec161aa5                                        2.2s 
+ => [2/5] WORKDIR /app                                                                                                           2.8s 
+ => [3/5] COPY requirements.txt /app/requirements.txt                                                                            1.9s 
+ => [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                                   124.1s 
+ => [5/5] COPY . /app                                                                                                            1.7s 
+ => exporting to image                                                                                                          12.2s 
+ => => exporting layers                                                                                                         11.2s 
+ => => writing image sha256:b14e50c7f15b4537cd0a3a0eedc9c2bfd517019ecdbf3e19d9f3a97107cfd93d                                     0.1s 
+ => => naming to docker.io/library/salary-hike-predictor                                                                         0.2s 
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ng43wsfhoudyijbrzqutep1fp
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview 

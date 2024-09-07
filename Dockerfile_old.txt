@@ -1,0 +1,18 @@
+# 1. Use a base image with Python
+FROM python
+
+# 2. Set the working directory inside the container
+WORKDIR /mlworld 
+
+# 3. Copy the requirements file and install dependencies
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose Port 5000
+EXPOSE 5000
+
+# 4. Copy the rest of the application code (Python script, model, etc.) to the working directory
+COPY . /app
+
+# 5. Define the entry point for running the prediction script
+CMD ["python", "predict_salary_hike.py"]
