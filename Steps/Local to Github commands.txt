@@ -1,0 +1,6 @@
+cd /path/to/your/project
+git init
+git remote add origin https://github.com/kaja1846/salary-hike-predictor
+git add .
+git commit -m "Initial commit - Add salary hike predictor model"
+git push -u origin main
